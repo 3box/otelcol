@@ -255,8 +255,10 @@ func (e *parquetExporter) shutdown(ctx context.Context) error {
 	if err := e.closeRowGroup(); err != nil {
 		return err
 	}
-	if err := e.w.Close(); err != nil {
-		return err
+	if e.w != nil {
+		if err := e.w.Close(); err != nil {
+			return err
+		}
 	}
 	//if err := e.f.Close(); err != nil {
 	//	return err
