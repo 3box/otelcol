@@ -7,6 +7,7 @@ exporters:
   - gomod: go.opentelemetry.io/collector/exporter/otlpexporter latest
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/exporter/prometheusexporter latest
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/exporter/parquetexporter latest
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/exporter/datadogexporter latest
 
 receivers:
   - gomod: go.opentelemetry.io/collector/receiver/otlpreceiver latest
